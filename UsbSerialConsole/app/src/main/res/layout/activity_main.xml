@@ -21,21 +21,26 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:showIn="@layout/activity_main">
 
+        <EditText
+            android:id="@+id/sendMsgView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/send_message_hint"
+            android:imeOptions="flagNoFullscreen"
+            android:inputType="textUri"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/amount" />
+
         <LinearLayout
             android:id="@+id/sendViewLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/sendMsgView"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:hint="@string/send_message_hint"
-                android:imeOptions="flagNoFullscreen"
-                android:inputType="textUri"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <Button
                 android:id="@+id/sendBtn"
@@ -43,6 +48,14 @@
                 android:layout_height="match_parent"
                 android:enabled="false"
                 android:text="@string/send" />
+
+            <Button
+                android:id="@+id/buttonPushTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PushTx"
+                android:enabled="false"/>
+
         </LinearLayout>
 
         <ScrollView
